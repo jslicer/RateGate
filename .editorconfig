@@ -2,3 +2,6 @@
 
 # IDE0065: Misplaced using directive
 csharp_using_directive_placement = inside_namespace
+
+# IDE0022: Use block body for method
+dotnet_diagnostic.IDE0022.severity = none
