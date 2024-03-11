@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.2</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>CVV.RateGate</AssemblyName>
     <RootNamespace>CVV</RootNamespace>
     <PackageProjectUrl>https://github.com/clayv/RateGate</PackageProjectUrl>
@@ -11,10 +11,15 @@
     <Description>This is Jack Leitch's RateGate code with a couple improvements specifically around thread saftety and long interval times (e.g. &gt; 24.9 days).</Description>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <Version>1.0.1</Version>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>preview-all</AnalysisLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CVV.Disposable" Version="1.0.0" />
+    <Reference Include="CVV.Disposable">
+      <HintPath>..\Disposable\bin\Release\netstandard2.1\CVV.Disposable.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
